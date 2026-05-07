@@ -156,3 +156,13 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# Java build files
+*.class
+*.jar
+*.war
+*.ear
+
+# IntelliJ / Java build directories
+/out/
+target/
+bin/
