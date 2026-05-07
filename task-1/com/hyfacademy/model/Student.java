@@ -13,7 +13,7 @@ public class Student {
     public Student(String name, String studentId) {
         this.name = name;
         this.studentId = studentId;
-        this.grades = new int[GradeUtils.MODULE_COUNT];
+        this.grades = new int[5];
         totalStudents++;
     }
 
