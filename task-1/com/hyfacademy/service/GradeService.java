@@ -193,15 +193,15 @@ public class GradeService {
                 continue;
             }
 
-            int choice = scanner.nextInt();
+            int input = scanner.nextInt();
             scanner.nextLine();
 
-            if(choice < 1 || choice > 5){
+            if(input < 1 || input > 5){
                 System.out.println("Please enter a number from 1 to 5.");
                 continue;
             }
 
-            switch(choice){
+            switch(input){
                case 1 -> addStudent();
                case 2 -> enterGrades();
                case 3 -> viewAllStudents();
