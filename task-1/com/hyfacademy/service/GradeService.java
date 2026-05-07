@@ -187,32 +187,29 @@ public class GradeService {
             System.out.println("  5. Exit");
             System.out.println("══════════════════════════════════════");
             System.out.print("Choose an option: ");
+   if(!scanner.hasNextInt()){
+                System.out.println("Please enter a valid number.");
+                scanner.nextLine();
+                continue;
+            }
 
-            String input = scanner.nextLine();
+            int choice = scanner.nextInt();
+            scanner.nextLine();
 
-            switch (input) {
-                case "1":
-                    addStudent();
-                    break;
+            if(choice < 1 || choice > 5){
+                System.out.println("Please enter a number from 1 to 5.");
+                continue;
+            }
 
-                case "2":
-                    enterGrades();
-                    break;
-
-                case "3":
-                    viewAllStudents();
-                    break;
-
-                case "4":
-                    viewStudentReport();
-                    break;
-
-                case "5":
-                    System.out.println("Exiting program... Goodbye!");
-                    return;
-
-                default:
-                    System.out.println("Invalid option. Please choose 1–5.");
+            switch(choice){
+               case 1 -> addStudent();
+               case 2 -> enterGrades();
+               case 3 -> viewAllStudents();
+               case 4 -> viewStudentReport();
+               case 5 -> {
+                   System.out.println("Goodbye!");
+                   return;
+               }
             }
 
             System.out.println();
@@ -221,6 +218,4 @@ public class GradeService {
 
 
 
-}
-
-
+    }
